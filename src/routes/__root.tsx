@@ -72,20 +72,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Siri Health Care — Premium Nephrology & General Medicine" },
+      { name: "description", content: "Professional nephrology and general healthcare clinic offering expert consultation, kidney care, diabetes management, and preventive healthcare." },
+      { name: "author", content: "Siri Health Care" },
+      { property: "og:title", content: "Siri Health Care" },
+      { property: "og:description", content: "Professional nephrology and general healthcare clinic offering expert consultation, kidney care, diabetes management, and preventive healthcare." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -108,12 +108,21 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { Navbar } from "@/components/site/Navbar";
+import { Footer } from "@/components/site/Footer";
+import { SmoothScroll } from "@/components/site/SmoothScroll";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <SmoothScroll />
+      <Navbar />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+      <Footer />
     </QueryClientProvider>
   );
 }
