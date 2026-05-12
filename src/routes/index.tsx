@@ -11,6 +11,7 @@ import {
 import { Reveal, Stagger, itemVariants } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
 import { TestimonialsMarquee } from "@/components/site/TestimonialsMarquee";
+import drVikramImg from "@/assets/dr-vikram-kumar.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,10 +100,11 @@ function HomePage() {
                 <div className="relative">
                   <div className="absolute -inset-4 gradient-primary opacity-20 blur-2xl rounded-[2rem]" />
                   <div className="relative aspect-[4/5] rounded-[2rem] bg-card border border-border shadow-elevated overflow-hidden">
-                    <div className="absolute inset-0 gradient-soft" />
-                    <div className="absolute inset-0 grid place-items-center">
-                      <HeartPulse className="h-44 w-44 text-primary/20" />
-                    </div>
+                    <img 
+                      src={drVikramImg} 
+                      alt="Dr. Vikram Kumar" 
+                      className="absolute inset-0 h-full w-full object-cover object-top"
+                    />
 
                     {/* Floating trust badge */}
                     <motion.div

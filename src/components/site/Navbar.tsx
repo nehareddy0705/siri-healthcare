@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, HeartPulse } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImg from "@/assets/logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -30,20 +31,18 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-soft"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-background/80 backdrop-blur-md border-b border-border shadow-soft"
+        : "bg-transparent"
+        }`}
     >
       <div className="container-px mx-auto max-w-7xl flex h-16 md:h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl gradient-primary text-primary-foreground shadow-soft">
-            <HeartPulse className="h-5 w-5" />
-          </span>
-          <span className="font-display font-semibold text-lg tracking-tight">
-            Siri <span className="text-primary">Health Care</span>
-          </span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logoImg}
+            alt="Siri Health Care Logo"
+            className="h-14 md:h-18 w-auto rounded-md object-contain"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
