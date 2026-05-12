@@ -1,7 +1,7 @@
 import app from '../dist/server/server.js';
 
 export const config = {
-  runtime: 'edge',
+  runtime: 'nodejs',
 };
 
 export default function (req, event) {
