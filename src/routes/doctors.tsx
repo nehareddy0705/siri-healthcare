@@ -24,6 +24,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Reveal, Stagger, itemVariants } from "@/components/site/Reveal";
+import drVikramImg from "@/assets/dr-vikram-kumar.jpeg";
 import { Counter } from "@/components/site/Counter";
 import { TestimonialsMarquee } from "@/components/site/TestimonialsMarquee";
 import { Button } from "@/components/ui/button";
@@ -134,8 +135,8 @@ function DoctorsPage() {
             <Reveal delay={0.2}>
               <div className="relative">
                 <div className="rounded-3xl bg-card border border-border shadow-elevated p-7">
-                  <div className="aspect-[4/5] rounded-2xl gradient-soft border border-border grid place-items-center overflow-hidden relative">
-                    <Stethoscope className="h-28 w-28 text-primary/25" />
+                  <div className="aspect-[4/5] rounded-2xl gradient-soft border border-border overflow-hidden relative">
+                    <img src={drVikramImg} alt="Dr. Vikram Kumar — Nephrologist & General Physician" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
                     <motion.div
                       animate={{ y: [0, -8, 0] }}
                       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -178,8 +179,8 @@ function DoctorsPage() {
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10">
             <Reveal>
               <div className="lg:sticky lg:top-28 rounded-3xl bg-card border border-border shadow-soft p-7">
-                <div className="aspect-square rounded-2xl gradient-soft border border-border grid place-items-center mb-6">
-                  <Stethoscope className="h-24 w-24 text-primary/30" />
+                <div className="aspect-square rounded-2xl gradient-soft border border-border overflow-hidden relative mb-6">
+                  <img src={drVikramImg} alt="Dr. Vikram Kumar" className="absolute inset-0 h-full w-full object-cover" />
                 </div>
                 <h2 className="text-2xl font-semibold">Dr. Vikram Kumar</h2>
                 <p className="text-sm text-primary font-medium mt-1">Nephrology · General Medicine</p>
