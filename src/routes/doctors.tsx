@@ -24,7 +24,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Reveal, Stagger, itemVariants } from "@/components/site/Reveal";
-import drVikramImg from "@/assets/dr-vikram-kumar.jpeg";
+import drVikramImg from "@/assets/dr-vikram-kumar.png";
 import { Counter } from "@/components/site/Counter";
 import { TestimonialsMarquee } from "@/components/site/TestimonialsMarquee";
 import { Button } from "@/components/ui/button";
