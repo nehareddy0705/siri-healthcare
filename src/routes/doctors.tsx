@@ -42,7 +42,7 @@ export const Route = createFileRoute("/doctors")({
       {
         name: "description",
         content:
-          "Meet Dr. Vikram Kumar — MBBS, MD, DM (Nephrology) with 19+ years of experience. Premier kidney specialist & general physician at Siri Health Care, SR Nagar Hyderabad.",
+          "Meet Dr. Vikram Kumar — MBBS, MD - General Medicine, DM - Nephrology with 19+ years of experience. Premier kidney specialist & general physician at Siri Health Care, SR Nagar Hyderabad.",
       },
       { property: "og:title", content: "Best Nephrologist in Hyderabad — Dr. Vikram Kumar" },
       {
@@ -65,7 +65,7 @@ const specializations = [
 ];
 
 const credentials = [
-  { icon: GraduationCap, label: "MBBS", sub: "General Medicine" },
+  { icon: GraduationCap, label: "MBBS", sub: "" },
   { icon: GraduationCap, label: "MD", sub: "General Medicine" },
   { icon: Award, label: "DM", sub: "Nephrology" },
 ];
@@ -78,8 +78,8 @@ const consultationSteps = [
 ];
 
 const faqs = [
-  { q: "How can I book an appointment with Dr. Vikram Kumar?", a: "Call the clinic at 040-49551250 or use the contact form. We confirm appointments within minutes during clinic hours." },
-  { q: "What are the consultation timings?", a: "Consultations are available Monday to Saturday, mornings and evenings. Sunday visits by prior appointment." },
+  { q: "How can I book an appointment with Dr. Vikram Kumar?", a: "Call the clinic at +91 9290582121 or use the contact form. We confirm appointments within minutes during clinic hours." },
+  { q: "What are the consultation timings?", a: "Consultations are available Monday to Saturday, 7:00 PM to 9:00 PM. Sunday visits by prior appointment." },
   { q: "Do you offer guidance for chronic kidney disease?", a: "Yes. Dr. Kumar provides full-spectrum CKD care — staging, lifestyle plans, medication, dialysis support and transplant counselling." },
   { q: "Can I consult for preventive health checkups?", a: "Absolutely. Annual preventive screenings tailored to your age, risk factors and family history are a core part of our practice." },
   { q: "How is diabetes management handled at the clinic?", a: "We design individualised plans combining medication, nutrition, monitoring and regular reviews to keep blood sugar within target." },
@@ -126,7 +126,7 @@ function DoctorsPage() {
                     <Link to="/contact">Book Appointment <ArrowRight className="ml-1 h-4 w-4" /></Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="rounded-full">
-                    <a href="tel:04049551250"><Phone className="mr-1 h-4 w-4" /> Contact Clinic</a>
+                    <a href="tel:+919290582121"><Phone className="mr-1 h-4 w-4" /> Contact Clinic</a>
                   </Button>
                 </div>
               </Reveal>
@@ -199,7 +199,7 @@ function DoctorsPage() {
                 </Button>
                 <div className="mt-4 rounded-xl border border-border p-4">
                   <div className="flex items-center gap-2 text-sm font-semibold"><Clock className="h-4 w-4 text-secondary" /> Availability</div>
-                  <div className="mt-2 text-xs text-muted-foreground">Mon–Sat · 10am–1pm & 5pm–8pm</div>
+                  <div className="mt-2 text-xs text-muted-foreground">Mon–Sat · 7pm–9pm</div>
                 </div>
               </div>
             </Reveal>
@@ -415,7 +415,7 @@ function DoctorsPage() {
                       <Link to="/contact">Book Appointment <ArrowRight className="ml-1 h-4 w-4" /></Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="rounded-full bg-transparent border-white/40 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
-                      <a href="tel:04049551250"><Phone className="mr-1 h-4 w-4" /> Call Clinic</a>
+                      <a href="tel:+919290582121"><Phone className="mr-1 h-4 w-4" /> Call Clinic</a>
                     </Button>
                   </div>
                 </div>
@@ -425,7 +425,7 @@ function DoctorsPage() {
                       <Phone className="h-5 w-5" />
                       <div>
                         <div className="text-xs uppercase tracking-wider opacity-80">Phone</div>
-                        <a href="tel:04049551250" className="text-lg font-semibold">040-49551250</a>
+                        <a href="tel:+919290582121" className="text-lg font-semibold">+91 9290582121</a>
                       </div>
                     </div>
                   </div>

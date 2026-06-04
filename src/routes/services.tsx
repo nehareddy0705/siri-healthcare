@@ -149,7 +149,7 @@ function ServicesPage() {
                     <Link to="/contact">Book Appointment <ArrowRight className="ml-1 h-4 w-4" /></Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="rounded-full">
-                    <a href="tel:04049551250"><Phone className="mr-1 h-4 w-4" /> Call Clinic</a>
+                    <a href="tel:+919290582121"><Phone className="mr-1 h-4 w-4" /> Call Clinic</a>
                   </Button>
                 </div>
               </Reveal>
@@ -347,10 +347,10 @@ function ServicesPage() {
                       <Link to="/contact"><CalendarCheck className="mr-1 h-4 w-4" /> Book Appointment</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="rounded-full bg-transparent border-white/40 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
-                      <a href="tel:04049551250"><Phone className="mr-1 h-4 w-4" /> Call Now</a>
+                      <a href="tel:+919290582121"><Phone className="mr-1 h-4 w-4" /> Call Now</a>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="rounded-full bg-transparent border-white/40 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
-                      <a href="https://www.google.com/maps/search/?api=1&query=Siri+Health+Care+SR+Nagar+Hyderabad" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.google.com/maps/place/Siri+Health+Care+%7C+SR+Nagar/@17.4436204,78.4464169,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91f4a295bd91:0x7868f44ae2310fb1!8m2!3d17.4436204!4d78.4464169!16s%2Fg%2F11zbx6r858?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                         <Navigation className="mr-1 h-4 w-4" /> Get Directions
                       </a>
                     </Button>
@@ -366,7 +366,7 @@ function ServicesPage() {
                       <Phone className="h-5 w-5" />
                       <div>
                         <div className="text-xs uppercase tracking-wider opacity-80">Phone</div>
-                        <a href="tel:04049551250" className="text-lg font-semibold">040-49551250</a>
+                        <a href="tel:+919290582121" className="text-lg font-semibold">+91 9290582121</a>
                       </div>
                     </div>
                   </div>

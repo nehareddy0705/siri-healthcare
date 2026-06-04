@@ -18,10 +18,29 @@ export const Route = createFileRoute("/contact")({
 });
 
 const cards = [
-  { icon: MapPin, title: "Visit us", text: "Hyderabad, India" },
-  { icon: Phone, title: "Call", text: "+91 00000 00000" },
-  { icon: Mail, title: "Email", text: "care@sirihealthcare.in" },
-  { icon: Clock, title: "Hours", text: "Mon–Sat · 9:00 – 20:00" },
+  {
+    icon: MapPin,
+    title: "Visit us",
+    text: "SR Nagar, Hyderabad, India",
+    href: "https://www.google.com/maps/place/Siri+Health+Care+%7C+SR+Nagar/@17.4436204,78.4464169,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91f4a295bd91:0x7868f44ae2310fb1!8m2!3d17.4436204!4d78.4464169!16s%2Fg%2F11zbx6r858?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    icon: Phone,
+    title: "Call",
+    text: "+91 9290582121",
+    href: "tel:+919290582121"
+  },
+  {
+    icon: Mail,
+    title: "Email",
+    text: "care@sirihealthcare.in",
+    href: "mailto:care@sirihealthcare.in"
+  },
+  {
+    icon: Clock,
+    title: "Hours",
+    text: "Mon–Sat · 7:00 PM – 9:00 PM"
+  },
 ];
 
 function ContactPage() {
@@ -38,12 +57,32 @@ function ContactPage() {
           <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {cards.map((c) => (
               <motion.div key={c.title} variants={itemVariants}
-                className="rounded-2xl bg-card border border-border p-6 shadow-soft">
-                <div className="h-10 w-10 rounded-xl gradient-primary text-primary-foreground grid place-items-center">
-                  <c.icon className="h-5 w-5" />
-                </div>
-                <div className="mt-4 text-sm font-semibold">{c.title}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{c.text}</div>
+                className="rounded-2xl bg-card border border-border p-6 shadow-soft hover:shadow-elevated transition-shadow duration-300">
+                {c.href ? (
+                  <a
+                    href={c.href}
+                    target={c.href.startsWith("http") ? "_blank" : undefined}
+                    rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="group block h-full"
+                  >
+                    <div className="h-10 w-10 rounded-xl gradient-primary text-primary-foreground grid place-items-center group-hover:scale-105 transition-transform duration-350">
+                      <c.icon className="h-5 w-5" />
+                    </div>
+                    <div className="mt-4 text-sm font-semibold group-hover:text-primary transition-colors flex items-center gap-1">
+                      {c.title}
+                      {c.href.startsWith("http") && <span className="text-xs font-normal text-muted-foreground opacity-50 group-hover:opacity-100 transition-opacity">↗</span>}
+                    </div>
+                    <div className="mt-1 text-sm text-muted-foreground group-hover:text-foreground transition-colors">{c.text}</div>
+                  </a>
+                ) : (
+                  <>
+                    <div className="h-10 w-10 rounded-xl gradient-primary text-primary-foreground grid place-items-center">
+                      <c.icon className="h-5 w-5" />
+                    </div>
+                    <div className="mt-4 text-sm font-semibold">{c.title}</div>
+                    <div className="mt-1 text-sm text-muted-foreground">{c.text}</div>
+                  </>
+                )}
               </motion.div>
             ))}
           </Stagger>
@@ -67,11 +106,32 @@ function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.1} className="lg:col-span-2">
-              <div className="rounded-3xl overflow-hidden border border-border shadow-soft h-full min-h-[420px] gradient-soft grid place-items-center relative">
-                <MapPin className="h-16 w-16 text-primary/30" />
-                <div className="absolute bottom-0 inset-x-0 bg-background/90 backdrop-blur p-5 border-t border-border">
-                  <div className="text-sm font-semibold">Map preview</div>
-                  <div className="text-xs text-muted-foreground mt-1">Embed coming soon — call us for directions.</div>
+              <div className="rounded-3xl overflow-hidden border border-border shadow-soft h-full min-h-[420px] relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.2458428807954!2d78.44383637516315!3d17.443625401399863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f4a295bd91%3A0x7868f44ae2310fb1!2sSiri%20Health%20Care%20%7C%20SR%20Nagar!5e0!3m2!1sen!2sin!4v1717478000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Siri Health Care Location Map"
+                  className="absolute inset-0 w-full h-full"
+                />
+                <div className="absolute bottom-4 left-4 right-4 bg-background/95 backdrop-blur p-4 border border-border rounded-2xl shadow-soft flex items-center justify-between gap-4">
+                  <div>
+                    <div className="text-sm font-semibold">Siri Health Care</div>
+                    <div className="text-xs text-muted-foreground mt-0.5">SR Nagar, Hyderabad</div>
+                  </div>
+                  <Button asChild size="sm" className="rounded-full shadow-soft shrink-0">
+                    <a
+                      href="https://www.google.com/maps/place/Siri+Health+Care+%7C+SR+Nagar/@17.4436204,78.4464169,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91f4a295bd91:0x7868f44ae2310fb1!8m2!3d17.4436204!4d78.4464169!16s%2Fg%2F11zbx6r858?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Open Maps
+                    </a>
+                  </Button>
                 </div>
               </div>
             </Reveal>

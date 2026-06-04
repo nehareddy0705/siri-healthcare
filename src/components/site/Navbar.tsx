@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImg from "@/assets/logo.png";
 
@@ -31,9 +31,11 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-background/80 backdrop-blur-md border-b border-border shadow-soft"
-        : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${open
+        ? "bg-background border-b border-border shadow-soft"
+        : scrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-soft"
+          : "bg-transparent"
         }`}
     >
       <div className="container-px mx-auto max-w-7xl flex h-16 md:h-20 items-center justify-between">
@@ -59,7 +61,14 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-6">
+          <a
+            href="tel:+919290582121"
+            className="flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+          >
+            <Phone className="h-4 w-4 text-primary" />
+            <span className="font-semibold text-foreground">+91 9290582121</span>
+          </a>
           <Button asChild className="rounded-full px-6 gradient-primary text-primary-foreground hover:opacity-95 shadow-soft">
             <Link to="/contact">Book Appointment</Link>
           </Button>
@@ -81,7 +90,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden fixed inset-0 top-16 bg-background"
+            className="lg:hidden fixed inset-0 top-16 md:top-20 bg-background"
           >
             <div className="container-px mx-auto max-w-7xl py-8 flex flex-col gap-2">
               {links.map((l, i) => (
@@ -103,6 +112,15 @@ export function Navbar() {
               <Button asChild className="mt-6 h-12 rounded-full gradient-primary text-primary-foreground">
                 <Link to="/contact" onClick={() => setOpen(false)}>Book Appointment</Link>
               </Button>
+              <div className="mt-4 px-4 flex flex-col gap-2">
+                <a
+                  href="tel:+919290582121"
+                  className="flex items-center justify-center gap-2 h-12 rounded-full border border-border text-foreground hover:bg-muted transition-colors font-medium"
+                >
+                  <Phone className="h-4 w-4 text-primary" />
+                  Call Us: +91 9290582121
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

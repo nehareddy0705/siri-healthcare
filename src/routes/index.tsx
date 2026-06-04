@@ -80,7 +80,10 @@ function HomePage() {
                     <Link to="/contact">Book Appointment <ArrowRight className="ml-1 h-4 w-4" /></Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="rounded-full h-12 px-7">
-                    <Link to="/services">Explore Services</Link>
+                    <a href="tel:+919290582121" className="flex items-center gap-2">
+                      <Phone className="h-4 w-4 text-primary shrink-0" />
+                      +91 9290582121
+                    </a>
                   </Button>
                 </div>
               </Reveal>
@@ -111,7 +114,7 @@ function HomePage() {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5 }}
-                      className="absolute top-6 left-6 rounded-2xl bg-background/90 backdrop-blur p-4 border border-border shadow-soft"
+                      className="hidden md:block absolute top-6 left-6 rounded-2xl bg-background/90 backdrop-blur p-4 border border-border shadow-soft"
                     >
                       <div className="flex items-center gap-3">
                         <div className="h-9 w-9 rounded-full bg-secondary/15 text-secondary grid place-items-center">
@@ -148,7 +151,7 @@ function HomePage() {
                         </div>
                         <div>
                           <div className="text-sm font-semibold">Dr. Vikram Kumar</div>
-                          <div className="text-xs text-muted-foreground">MBBS, MD, DM (Nephrology)</div>
+                          <div className="text-xs text-muted-foreground">MBBS, MD - General Medicine, DM - Nephrology</div>
                         </div>
                       </div>
                     </motion.div>
@@ -299,8 +302,12 @@ function HomePage() {
           <Reveal delay={0.1}>
             <div className="mt-14 max-w-5xl mx-auto rounded-3xl bg-card border border-border p-8 md:p-12 shadow-soft grid md:grid-cols-5 gap-10 items-center">
               <div className="md:col-span-2 relative">
-                <div className="aspect-square rounded-3xl gradient-soft border border-border grid place-items-center">
-                  <Stethoscope className="h-20 w-20 text-primary/30" />
+                <div className="aspect-square rounded-3xl gradient-soft border border-border overflow-hidden relative">
+                  <img
+                    src={drVikramImg}
+                    alt="Dr. Vikram Kumar"
+                    className="absolute inset-0 h-full w-full object-cover object-top"
+                  />
                 </div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -324,9 +331,9 @@ function HomePage() {
                 <p className="text-primary text-sm font-medium mt-1">Consultant Nephrologist & Physician</p>
                 <div className="mt-5 grid sm:grid-cols-2 gap-3 text-sm">
                   {[
-                    { icon: GraduationCap, t: "MBBS — General Medicine" },
-                    { icon: GraduationCap, t: "MD — General Medicine" },
-                    { icon: GraduationCap, t: "DM — Nephrology" },
+                    { icon: GraduationCap, t: "MBBS" },
+                    { icon: GraduationCap, t: "MD - General Medicine" },
+                    { icon: GraduationCap, t: "DM - Nephrology" },
                     { icon: Briefcase, t: "19 years experience" },
                   ].map((c) => (
                     <div key={c.t} className="flex items-start gap-2 text-muted-foreground">
@@ -417,7 +424,7 @@ function HomePage() {
             <Accordion type="single" collapsible className="mt-12 space-y-3">
               {[
                 { q: "How do I book an appointment?", a: "You can book via our Contact page form, by calling the clinic, or by sending an email. We confirm appointments within one business day." },
-                { q: "What are the consultation hours?", a: "Monday to Saturday, 9:00 AM to 8:00 PM. Sundays are reserved for emergencies and follow-up calls only." },
+                { q: "What are the consultation hours?", a: "Monday to Saturday, 7:00 PM to 9:00 PM. Sundays are reserved for emergencies and follow-up calls only." },
                 { q: "What services do you offer?", a: "Nephrology, general medicine, diabetes care, hypertension management, kidney disease consultation, and preventive health checkups." },
                 { q: "Do you provide emergency support?", a: "Yes. Existing patients have access to a priority phone line for urgent concerns. For life-threatening emergencies, please dial your nearest hospital." },
                 { q: "How do you approach preventive health?", a: "We tailor screening packages based on your age, family history and lifestyle — focused on catching issues early and supporting long-term wellness." },
@@ -459,7 +466,7 @@ function HomePage() {
                     <Link to="/contact">Book Consultation</Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="rounded-full h-12 px-7 bg-transparent border-white/40 text-primary-foreground hover:bg-white/10">
-                    <Link to="/contact"><Phone className="mr-2 h-4 w-4" /> Contact Clinic</Link>
+                    <a href="tel:+919290582121"><Phone className="mr-2 h-4 w-4" /> Call Clinic</a>
                   </Button>
                 </div>
               </div>

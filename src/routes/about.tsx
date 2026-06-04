@@ -179,9 +179,9 @@ function AboutPage() {
 
                 <div className="mt-8 space-y-4">
                   {[
-                    { icon: GraduationCap, title: "MBBS — General Medicine", sub: "Foundational clinical training" },
-                    { icon: GraduationCap, title: "MD — General Medicine", sub: "Internal medicine specialisation" },
-                    { icon: GraduationCap, title: "DM — Nephrology", sub: "Super-specialty in kidney care" },
+                    { icon: GraduationCap, title: "MBBS", sub: "Foundational clinical training" },
+                    { icon: GraduationCap, title: "MD - General Medicine", sub: "Internal medicine specialisation" },
+                    { icon: GraduationCap, title: "DM - Nephrology", sub: "Super-specialty in kidney care" },
                     { icon: Briefcase, title: "19 years of experience", sub: "Across hospital and outpatient practice" },
                   ].map((c) => (
                     <div key={c.title} className="flex items-start gap-4 rounded-2xl bg-card border border-border p-4 shadow-soft">
