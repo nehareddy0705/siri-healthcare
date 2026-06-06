@@ -56,14 +56,24 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-              <a
-                href="https://www.google.com/maps/place/Siri+Health+Care+%7C+SR+Nagar/@17.4436204,78.4464169,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91f4a295bd91:0x7868f44ae2310fb1!8m2!3d17.4436204!4d78.4464169!16s%2Fg%2F11zbx6r858?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors text-left"
-              >
-                SR Nagar, Hyderabad, India
-              </a>
+              <div className="flex flex-col gap-1">
+                <a
+                  href="https://www.google.com/maps/place/Siri+Health+Care+%7C+SR+Nagar/@17.4436204,78.4464169,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91f4a295bd91:0x7868f44ae2310fb1!8m2!3d17.4436204!4d78.4464169!16s%2Fg%2F11zbx6r858?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors text-left"
+                >
+                  7-1-397, BK Guda Rd, near Community hall cross roads, Sanjeeva Reddy Nagar, Hyderabad, Telangana 500038
+                </a>
+                <a
+                  href="https://www.google.com/maps/place/Siri+Health+Care+%7C+SR+Nagar/@17.4436204,78.4464169,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91f4a295bd91:0x7868f44ae2310fb1!8m2!3d17.4436204!4d78.4464169!16s%2Fg%2F11zbx6r858?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-primary hover:underline hover:text-primary/80 transition-colors inline-flex items-center gap-1 font-medium"
+                >
+                  View on Google Maps ↗
+                </a>
+              </div>
             </li>
             <li className="flex items-start gap-2">
               <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
@@ -71,7 +81,12 @@ export function Footer() {
                 +91 9290582121
               </a>
             </li>
-            <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> care@sirihealthcare.in</li>
+            <li className="flex items-start gap-2">
+              <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+              <a href="mailto:sirispecialityclinic@gmail.com" className="hover:text-primary transition-colors">
+                sirispecialityclinic@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
       </div>

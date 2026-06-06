@@ -21,7 +21,7 @@ const cards = [
   {
     icon: MapPin,
     title: "Visit us",
-    text: "SR Nagar, Hyderabad, India",
+    text: "7-1-397, BK Guda Rd, near Community hall cross roads, Sanjeeva Reddy Nagar, Hyderabad, Telangana 500038",
     href: "https://www.google.com/maps/place/Siri+Health+Care+%7C+SR+Nagar/@17.4436204,78.4464169,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb91f4a295bd91:0x7868f44ae2310fb1!8m2!3d17.4436204!4d78.4464169!16s%2Fg%2F11zbx6r858?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -33,8 +33,8 @@ const cards = [
   {
     icon: Mail,
     title: "Email",
-    text: "care@sirihealthcare.in",
-    href: "mailto:care@sirihealthcare.in"
+    text: "sirispecialityclinic@gmail.com",
+    href: "mailto:sirispecialityclinic@gmail.com"
   },
   {
     icon: Clock,
@@ -121,7 +121,7 @@ function ContactPage() {
                 <div className="absolute bottom-4 left-4 right-4 bg-background/95 backdrop-blur p-4 border border-border rounded-2xl shadow-soft flex items-center justify-between gap-4">
                   <div>
                     <div className="text-sm font-semibold">Siri Health Care</div>
-                    <div className="text-xs text-muted-foreground mt-0.5">SR Nagar, Hyderabad</div>
+                    <div className="text-xs text-muted-foreground mt-0.5">Sanjeeva Reddy Nagar, Hyderabad</div>
                   </div>
                   <Button asChild size="sm" className="rounded-full shadow-soft shrink-0">
                     <a

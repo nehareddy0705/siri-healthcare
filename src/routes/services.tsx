@@ -30,7 +30,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Comprehensive nephrology, kidney disease management, diabetes care, hypertension and preventive healthcare services at Siri Health Care, SR Nagar, Hyderabad.",
+          "Comprehensive nephrology, kidney disease management, diabetes care, hypertension and preventive healthcare services at Siri Health Care, Sanjeeva Reddy Nagar, Hyderabad.",
       },
       { property: "og:title", content: "Healthcare Services — Siri Health Care" },
       {
@@ -340,7 +340,7 @@ function ServicesPage() {
                     Ready to take the next step?
                   </h2>
                   <p className="mt-4 text-primary-foreground/85 max-w-xl">
-                    Book your appointment at Siri Health Care — specialist consultations with Dr. Vikram Kumar in SR Nagar, Hyderabad.
+                    Book your appointment at Siri Health Care — specialist consultations with Dr. Vikram Kumar in Sanjeeva Reddy Nagar, Hyderabad.
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
                     <Button asChild size="lg" variant="secondary" className="rounded-full">
@@ -375,7 +375,7 @@ function ServicesPage() {
                       <MapPin className="h-5 w-5" />
                       <div>
                         <div className="text-xs uppercase tracking-wider opacity-80">Location</div>
-                        <div className="text-lg font-semibold">SR Nagar, Hyderabad</div>
+                        <div className="text-lg font-semibold">Sanjeeva Reddy Nagar, Hyderabad</div>
                       </div>
                     </div>
                   </div>

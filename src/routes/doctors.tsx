@@ -42,7 +42,7 @@ export const Route = createFileRoute("/doctors")({
       {
         name: "description",
         content:
-          "Meet Dr. Vikram Kumar — MBBS, MD - General Medicine, DM - Nephrology with 19+ years of experience. Premier kidney specialist & general physician at Siri Health Care, SR Nagar Hyderabad.",
+          "Meet Dr. Vikram Kumar — MBBS, MD - General Medicine, DM - Nephrology with 19+ years of experience. Premier kidney specialist & general physician at Siri Health Care, Sanjeeva Reddy Nagar, Hyderabad.",
       },
       { property: "og:title", content: "Best Nephrologist in Hyderabad — Dr. Vikram Kumar" },
       {
@@ -311,7 +311,7 @@ function DoctorsPage() {
             <Reveal delay={0.1}>
               <div className="relative pl-8 border-l-2 border-primary/20">
                 {[
-                  { y: "Today", t: "Senior Consultant — Siri Health Care", d: "Leading nephrology & general medicine practice in SR Nagar." },
+                  { y: "Today", t: "Senior Consultant — Siri Health Care", d: "Leading nephrology & general medicine practice in Sanjeeva Reddy Nagar." },
                   { y: "DM", t: "Nephrology Super-Specialty", d: "Advanced training in kidney disease, dialysis and transplant care." },
                   { y: "MD", t: "General Medicine", d: "Foundation in adult internal medicine and complex diagnostics." },
                   { y: "MBBS", t: "Medical Graduation", d: "Began the journey with a passion for evidence-based, compassionate care." },
@@ -434,7 +434,7 @@ function DoctorsPage() {
                       <MapPin className="h-5 w-5" />
                       <div>
                         <div className="text-xs uppercase tracking-wider opacity-80">Location</div>
-                        <div className="text-lg font-semibold">SR Nagar, Hyderabad</div>
+                        <div className="text-lg font-semibold">Sanjeeva Reddy Nagar, Hyderabad</div>
                       </div>
                     </div>
                   </div>
